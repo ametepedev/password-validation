@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #7abcf3;
+    --color-background: #23617e;
+    --color-success: #0f0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    background: var(--color-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.box{
+    width: 300px;
+}
+.box .password-box{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.box .password-box input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 50px 10px 5px;
+}
+.box .password-box .password-satus{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: rgba(2,204,255,0.1);
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    border-radius: 50%;
+}
+.box .password-box .password-satus::before{
+    content: '\f06e';
+    font-family: FontAwesome;
+}
+.box .password-box .password-satus.hide::before{
+    content: '\f070';
+    font-family: FontAwesome;
+}
+
+.box .password-check{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(18,112,119,0.267);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 30px;
+}
+.box .password-check li{
+    color: #fff;
+}
+.box .password-check li::before{
+    content: '\f192';
+    font-family: FontAwesome;
+    margin-right: 15px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.box .password-check .correct{
+    color: rgb(219,219,219);
+}
+
+.box .password-check .correct::before{
+    content: '\f00c';
+    font-family: FontAwesome;
+    margin-right: 15px;
+    color: var(--color-success);
+    font-weight: 300;
+}

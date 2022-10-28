@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDATION DE MOT DE PASSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="password-box">
+                <input type="password" name="" id="password" placeholder="Entrez le mot de passe" oninput="check(this.value);">
+                <span class="password-satus"></span>
+            </div>
+            <ul class="password-check">
+                <li class="min-lenght">Longueur supérieure à 8</li>
+                <li class="con-number">Contient un caractère numérique</li>
+                <li class="con-special">Contient un caractère spécial</li>
+                <li class="no-space">Ne doit pas contenir d'espace</li>
+                <li class="con-lower">Au moins un caractère minuscule</li>
+                <li class="con-upper">Au moins un caractère majiscule</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
